@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room.name %>
+</p>
+
+<p>
+<%= render 'messages/form', message: @room.messages.build(user: current_user) %>
+
+</p>
+
+<div id='messages'>
+  <%= render partial: 'messages/message', collection: @room.messages %>
+</div>
+
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

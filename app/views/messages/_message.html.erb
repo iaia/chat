@@ -1,0 +1,5 @@
+<div class='message'>
+  <% if message.persisted? %>
+    <p><%= message.user.name %>: <%= message.content %></p>
+  <% end %>
+</div>
